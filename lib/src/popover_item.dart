@@ -54,7 +54,10 @@ class _PopoverItemState extends State<PopoverItem> {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (_, __) {
-        _configure();
+        try {
+          _configure();
+        } catch (e) {
+        }
         return Stack(
           children: [
             PopoverPositionWidget(
